@@ -42,10 +42,36 @@ public class SceneManager_Battle : MonoBehaviour {
 		
 	}
 
-	public void OnInput(){
-		Debug.Log("入力しました！");
+	public void OnInputButtonA(){
+		Debug.Log("ButtonA");
 	}
-
+	public void OnInputButtonB(){
+		Debug.Log("ButtonB");
+	}
+	public void OnInputButtonX(){
+		Debug.Log("ButtonX");
+	}
+	public void OnInputButtonY(){
+		Debug.Log("ButtonY");
+	}
+	public void OnInputButtonLB(){
+		Debug.Log("ButtonLB");
+	}
+	public void OnInputButtonRB(){
+		Debug.Log("ButtonRB");
+	}
+	public void OnInputButtonBACK(){
+		Debug.Log("ButtonBACK");
+	}
+	public void OnInputButtonSTART(){
+		Debug.Log("ButtonSTART");
+	}
+	public void OnInputStickLeftPush(){
+		Debug.Log("StickLeftPush");
+	}
+	public void OnInpuStickRightPush(){
+		Debug.Log("StickRightPush");
+	}
 	public void OnInputStick( float x, float y ){
 		Debug.Log("スティック入力！　x:" + x + ", y:" + y );
 	}

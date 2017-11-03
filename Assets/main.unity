@@ -211,7 +211,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonA
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonB
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonX
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -259,7 +259,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonY
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -273,25 +273,14 @@ MonoBehaviour:
         PublicKeyToken=null
     ButtonLT:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
     ButtonLB:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonLB
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -305,25 +294,14 @@ MonoBehaviour:
         PublicKeyToken=null
     ButtonRT:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
     ButtonRB:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonRB
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -339,7 +317,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonSTART
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -355,7 +333,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInput
+          m_MethodName: OnInputButtonBACK
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -417,34 +395,12 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     StickRight:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInputStick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: XBoxInputType+UnityEvent_float_float, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     DirectionPad:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1749408064}
-          m_MethodName: OnInputStick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: XBoxInputType+UnityEvent_float_float, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   InputMode_windowControl:
@@ -599,6 +555,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: XBoxInputType+UnityEvent_float_float, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  SceneMode: 0
 --- !u!114 &1749408065
 MonoBehaviour:
   m_ObjectHideFlags: 0

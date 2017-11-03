@@ -12,22 +12,29 @@ public class XboxControllerManager : MonoBehaviour {
 		if( Input.GetKey( KeyCode.Joystick1Button1) ) inputType.ButtonB.Invoke();
 		if( Input.GetKey( KeyCode.Joystick1Button2) ) inputType.ButtonX.Invoke();
 		if( Input.GetKey( KeyCode.Joystick1Button3) ) inputType.ButtonY.Invoke();
-		if( Input.GetKey( KeyCode.Joystick1Button4) ) inputType.ButtonLT.Invoke();
-		if( Input.GetKey( KeyCode.Joystick1Button5) ) inputType.ButtonLB.Invoke();
-		if( Input.GetKey( KeyCode.Joystick1Button6) ) inputType.ButtonRT.Invoke();
-		if( Input.GetKey( KeyCode.Joystick1Button7) ) inputType.ButtonRB.Invoke();
+		if( Input.GetKey( KeyCode.Joystick1Button4) ) inputType.ButtonLB.Invoke();
+		if( Input.GetKey( KeyCode.Joystick1Button5) ) inputType.ButtonRB.Invoke();
+		if( Input.GetKey( KeyCode.Joystick1Button6) ) inputType.ButtonBACK.Invoke();
+		if( Input.GetKey( KeyCode.Joystick1Button7) ) inputType.ButtonSTART.Invoke();
 		if( Input.GetKey( KeyCode.Joystick1Button8) ) inputType.StickLeftPush.Invoke();
 		if( Input.GetKey( KeyCode.Joystick1Button9) ) inputType.StickRightPush.Invoke();
+		// LT,RTは設定しないと取得できない
+		// if( Input.GetKey( KeyCode.Joystick1Button4) ) inputType.ButtonLT.Invoke();
+		// if( Input.GetKey( KeyCode.Joystick1Button6) ) inputType.ButtonRT.Invoke();
+		
+		var HoricontalInput = Input.GetAxis("Horizontal");
+		var VerticalInput   = Input.GetAxis("Vertical");
+		if( HoricontalInput != 0.0f || VerticalInput != 0.0f ) inputType.StickLeft.Invoke( HoricontalInput, VerticalInput );
 
-		// ここ要調整
-		var TrigerInput = Input.GetAxis("Triger");
-		if( TrigerInput != 0.0f ) inputType.StickLeft.Invoke( TrigerInput, 2f );
 
-		var HoricontalKeyInput = Input.GetAxis("HorizontalKey");
-		if( HoricontalKeyInput != 0.0f ) inputType.StickRight.Invoke( HoricontalKeyInput, 2f );
+		// // ここ要調整
+		// var TrigerInput = Input.GetAxis("Triger");
 
-		var VerticalKeyInput = Input.GetAxis("VerticalKey");
-		if( VerticalKeyInput != 0.0f ) inputType.DirectionPad.Invoke( VerticalKeyInput, 2f );
+		// var HoricontalKeyInput = Input.GetAxis("HorizontalKey");
+		// if( HoricontalKeyInput != 0.0f ) inputType.StickRight.Invoke( HoricontalKeyInput, 2f );
+
+		// var VerticalKeyInput = Input.GetAxis("VerticalKey");
+		// if( VerticalKeyInput != 0.0f ) inputType.DirectionPad.Invoke( VerticalKeyInput, 2f );
 	}
 }
 
@@ -37,7 +44,7 @@ public class XboxControllerManager : MonoBehaviour {
 [System.Serializable]
 public class XBoxInputType {
 	public UnityEvent ButtonA, ButtonB,  ButtonX,  ButtonY,
-	ButtonLT, ButtonLB, ButtonRT, ButtonRB, ButtonSTART, ButtonBACK,
+	ButtonLT, ButtonLB, ButtonRT, ButtonRB, ButtonBACK, ButtonSTART, 
 	StickLeftPush, StickRightPush; 
 
 	[System.Serializable]
