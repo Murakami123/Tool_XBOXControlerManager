@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using System.Collections;
 
 public class SceneManager_Battle : MonoBehaviour {
@@ -16,14 +17,13 @@ public class SceneManager_Battle : MonoBehaviour {
 // 初期化
 //------------------------------------------------------------------
 	public void Initialize(){
-
 	}
 
 	[SerializeField] XboxControllerManager xboxControlManager;
-	[SerializeField] XBoxInputType InputMode_charaMove; 
+	[SerializeField] XBoxInputType InputMode_charaMove;
 	[SerializeField] XBoxInputType InputMode_windowControl; 
 	[SerializeField] XBoxInputType InputMode_pause; 	
-	private int SceneMode;
+	public int SceneMode;
 	void Update(){
 		switch( SceneMode ){
 			case  1: 
@@ -41,6 +41,16 @@ public class SceneManager_Battle : MonoBehaviour {
 		}
 		
 	}
+
+	public void OnInput(){
+		Debug.Log("入力しました！");
+	}
+
+	public void OnInputStick( float x, float y ){
+		Debug.Log("スティック入力！　x:" + x + ", y:" + y );
+	}
+
+
 
 //------------------------------------------------------------------
 // 処理
